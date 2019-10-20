@@ -4,8 +4,11 @@ namespace UserFrosting\Sprinkle\Site\Controller;
 
 use UserFrosting\Sprinkle\Core\Controller\SimpleController;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Database\Capsule\Manager as Capsule;
 use mysqli;
+use App\Http\Controllers\Controller;
+
+
+
 
 class OwlController extends SimpleController
 {
@@ -15,12 +18,12 @@ class OwlController extends SimpleController
 
         //$this->getContainer()->db;
 
-
+        $users = DB::table('users')->get();
 
         //$hi = DB::select("select * from Users");
 
 
-        $servername = "localhost";
+       /* $servername = "localhost";
         $dbname = "userfrosting";
         $username = "root";
         $password = "";
@@ -48,7 +51,7 @@ class OwlController extends SimpleController
 } else {
     echo "0 results";
 }
-
+*/
 
         //echo "Connected successfully";
 
